@@ -1,13 +1,14 @@
 import 'package:app/screens/contact/contact.dart';
 import 'package:app/screens/intro/intro.dart';
+import 'package:app/screens/portfolio/portfolio.dart';
 import 'package:app/screens/widgets/footer/footer.dart';
 import 'package:app/screens/widgets/header/header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import 'bloc/page_index_bloc.dart';
-
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -43,6 +44,15 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: const FaIcon(FontAwesomeIcons.arrowUp),
+        onPressed: () {
+          itemScrollController.scrollTo(
+            index: 0,
+            duration: const Duration(seconds: 1),
+          );
+        },
+      ),
       body: SafeArea(
         child: BlocListener<PageIndexBloc, PageIndexState>(
           listener: (context, state) {
@@ -54,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
             }
           },
           child: ScrollablePositionedList.builder(
-            itemCount: 4,
+            itemCount: 5,
             itemScrollController: itemScrollController,
             itemPositionsListener: itemPositionsListener,
             itemBuilder: (context, index) {
@@ -66,11 +76,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   return const Intro();
 
                 case 2:
-                  return const Contact();
+                  return const Portfolio();
 
                 case 3:
-                  return const Footer();
+                  return const Contact();
 
+                case 4:
+                  return const Footer();
 
                 default:
                   return Container(
