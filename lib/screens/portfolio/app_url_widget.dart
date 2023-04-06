@@ -31,3 +31,24 @@ List<Widget> generateWidgetForUrl(Map<String, String> urls, Color color) {
 
   return icons;
 }
+
+List<Widget> generateWidgetForPage(int total, int current, dynamic onClick) {
+  List<Widget> dots = [];
+  for (int i = 0; i < total; i++) {
+    IconData data =
+        current == i ? FontAwesomeIcons.solidCircle : FontAwesomeIcons.circle;
+    double size = current == i ? 20 : 15;
+    final dot = IconButton(
+      icon: FaIcon(data),
+      color: Colors.green,
+      iconSize: size,
+      onPressed: () {
+        onClick(i);
+      },
+    );
+
+    dots.add(dot);
+  }
+
+  return dots;
+}

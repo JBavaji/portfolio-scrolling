@@ -51,7 +51,6 @@ class Intro extends StatelessWidget {
         ClipRRect(
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(20),
-            bottomLeft: Radius.circular(20),
           ),
           child: Image.asset(
             AppAssets.homeLandingImage,

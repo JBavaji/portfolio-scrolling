@@ -22,24 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
   /// Controller to scroll or jump to a particular item.
   final ItemScrollController itemScrollController = ItemScrollController();
 
-  /// Listener that reports the position of items when the list is scrolled.
-  final ItemPositionsListener itemPositionsListener =
-      ItemPositionsListener.create();
-
   @override
   void initState() {
     super.initState();
-    // itemPositionsListener.itemPositions.addListener(() {
-    //   final indices = itemPositionsListener.itemPositions.value.where((item) {
-    //     final isTopVisible = item.itemLeadingEdge >= 0;
-    //     final isBottomVisible = item.itemTrailingEdge <= 1;
-    //     return isTopVisible && isBottomVisible;
-    //   }).map((item) {
-    //     return item.index;
-    //   }).first;
-    //
-    //   print(indices);
-    // });
   }
 
   @override
@@ -67,7 +52,6 @@ class _HomeScreenState extends State<HomeScreen> {
           child: ScrollablePositionedList.builder(
             itemCount: 6,
             itemScrollController: itemScrollController,
-            itemPositionsListener: itemPositionsListener,
             itemBuilder: (context, index) {
               switch (index) {
                 case 0:
