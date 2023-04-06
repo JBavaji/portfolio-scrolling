@@ -17,10 +17,7 @@ class Header extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           AppLogo(
-            onLogoClick: () {
-              BlocProvider.of<PageIndexBloc>(context)
-                  .add(ScrollToPageIndexEvent(25));
-            },
+            onLogoClick: () {},
           ),
           const PageNavigatorRowWidget(),
         ],

@@ -1,4 +1,9 @@
+import 'package:app/screens/portfolio/app_item.dart';
+import 'package:app/screens/portfolio/model/project_info_model.dart';
+import 'package:app/screens/widgets/stroke_text_style.dart';
 import 'package:flutter/material.dart';
+
+import 'model/projects_info_list_data.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({Key? key}) : super(key: key);
@@ -8,25 +13,12 @@ class Portfolio extends StatefulWidget {
 }
 
 class _PortfolioState extends State<Portfolio> {
-  List<String> itemData = [];
+  List<ProjectInfoModel> itemData = [];
 
   @override
   void initState() {
     setState(() {
-      itemData = [
-        "https://lh3.googleusercontent.com/JrDdS6CFXuDmzZXe_jJid8xInN0fDE5PDMjwiCmQOl8RUiTFIf3yio1QTG7TV4aYPS8",
-        "https://play-lh.googleusercontent.com/rx2pXmoGZGgDZ6po8wb37S7Jc7HoKmWd0LaRpoQFuHgDFFvGVxqqJfHklD82fSJ2n2Q",
-        "https://play-lh.googleusercontent.com/0ljH3BCBEBUTLhYfNjH7P4Y9aHk1hBMMjT-RKx3XXypl6LpWNmkgghwIn3hI1AqAN7Y",
-        "https://play-lh.googleusercontent.com/U-UnxaHQjzKqVa7l1HSn61wz-NwYXdLqqRnhy5oatlmLl-9lal5kCMhYL-Ln_G0Oq3E",
-        "https://lh3.googleusercontent.com/JrDdS6CFXuDmzZXe_jJid8xInN0fDE5PDMjwiCmQOl8RUiTFIf3yio1QTG7TV4aYPS8",
-        "https://play-lh.googleusercontent.com/rx2pXmoGZGgDZ6po8wb37S7Jc7HoKmWd0LaRpoQFuHgDFFvGVxqqJfHklD82fSJ2n2Q",
-        "https://play-lh.googleusercontent.com/0ljH3BCBEBUTLhYfNjH7P4Y9aHk1hBMMjT-RKx3XXypl6LpWNmkgghwIn3hI1AqAN7Y",
-        "https://play-lh.googleusercontent.com/U-UnxaHQjzKqVa7l1HSn61wz-NwYXdLqqRnhy5oatlmLl-9lal5kCMhYL-Ln_G0Oq3E",
-        "https://lh3.googleusercontent.com/JrDdS6CFXuDmzZXe_jJid8xInN0fDE5PDMjwiCmQOl8RUiTFIf3yio1QTG7TV4aYPS8",
-        "https://play-lh.googleusercontent.com/rx2pXmoGZGgDZ6po8wb37S7Jc7HoKmWd0LaRpoQFuHgDFFvGVxqqJfHklD82fSJ2n2Q",
-        "https://play-lh.googleusercontent.com/0ljH3BCBEBUTLhYfNjH7P4Y9aHk1hBMMjT-RKx3XXypl6LpWNmkgghwIn3hI1AqAN7Y",
-        "https://play-lh.googleusercontent.com/U-UnxaHQjzKqVa7l1HSn61wz-NwYXdLqqRnhy5oatlmLl-9lal5kCMhYL-Ln_G0Oq3E",
-      ];
+      itemData = projectInfoList;
     });
     super.initState();
   }
@@ -36,48 +28,22 @@ class _PortfolioState extends State<Portfolio> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(
-          'Portfolio',
-          style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                fontSize: 86,
-                fontWeight: FontWeight.w700,
-                color: Colors.green.shade700,
-              ),
+        const StrokeText(
+          strokeText: 'Portfolio',
+          fillText: 'Development',
+          fontSize: 186,
         ),
-        GridView.builder(
-          shrinkWrap: true,
-          scrollDirection: Axis.vertical,
-          itemCount: itemData.length,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            childAspectRatio: 1.5,
-            crossAxisSpacing: 0,
-            mainAxisSpacing: 30,
+        // AppItem(),
+
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.60,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: itemData.length,
+            itemBuilder: (context, index) {
+              return AppItem(projectInfo: itemData[index]);
+            },
           ),
-          itemBuilder: (context, index) {
-            return MouseRegion(
-              cursor: SystemMouseCursors.click,
-              child: GestureDetector(
-                onTap: () {},
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.green.withOpacity(0.1),
-                    ),
-                    child: Center(
-                      child: SizedBox(
-                        height: 100,
-                        width: 100,
-                        child: Image.network(itemData[index]),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            );
-          },
         ),
       ],
     );

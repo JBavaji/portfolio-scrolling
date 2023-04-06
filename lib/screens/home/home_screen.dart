@@ -1,3 +1,4 @@
+import 'package:app/screens/about/about_me.dart';
 import 'package:app/screens/contact/contact.dart';
 import 'package:app/screens/intro/intro.dart';
 import 'package:app/screens/portfolio/portfolio.dart';
@@ -64,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
             }
           },
           child: ScrollablePositionedList.builder(
-            itemCount: 5,
+            itemCount: 6,
             itemScrollController: itemScrollController,
             itemPositionsListener: itemPositionsListener,
             itemBuilder: (context, index) {
@@ -79,9 +80,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   return const Portfolio();
 
                 case 3:
-                  return const Contact();
+                  return const AboutMe();
 
                 case 4:
+                  return const Contact();
+
+                case 5:
                   return const Footer();
 
                 default:
