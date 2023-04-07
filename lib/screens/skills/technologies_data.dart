@@ -15,6 +15,7 @@ final List<Map<String, List<Map<String, String>>>> languages = [
       {'name': "Flutter", 'icon': AppAssets.flutter},
       {'name': "React Native", 'icon': AppAssets.react_native},
       {'name': "Kotlin", 'icon': AppAssets.kotlin},
+      {'name': "Java", 'icon': AppAssets.java},
     ]
   },
   {

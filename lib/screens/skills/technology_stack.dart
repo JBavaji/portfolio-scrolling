@@ -1,7 +1,5 @@
-import 'package:app/app_config/assets_data.dart';
-import 'package:app/screens/about/technologies_data.dart';
-import 'package:app/screens/about/technology_item.dart';
-import 'package:app/screens/about/technology_language.dart';
+import 'package:app/screens/skills/technologies_data.dart';
+import 'package:app/screens/skills/technology_language.dart';
 import 'package:app/screens/widgets/stroke_text_style.dart';
 import 'package:flutter/material.dart';
 
@@ -18,8 +16,8 @@ class _TechnologyStackState extends State<TechnologyStack>
 
   @override
   void initState() {
-    _controller =
-        TabController(length: technologies.length, vsync: this, initialIndex: 0);
+    _controller = TabController(
+        length: technologies.length, vsync: this, initialIndex: 0);
     super.initState();
   }
 
@@ -32,7 +30,7 @@ class _TechnologyStackState extends State<TechnologyStack>
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.70,
+      height: MediaQuery.of(context).size.height * 0.80,
       width: MediaQuery.of(context).size.width,
       decoration: const BoxDecoration(
           color: Colors.white,
@@ -43,8 +41,10 @@ class _TechnologyStackState extends State<TechnologyStack>
           const SizedBox(height: 20),
           const StrokeText(
             strokeText: 'Technology Stack',
-            fillText: 'working with',
-            fontSize: 86,
+            fillText: '10+ Years\n',
+            fontSize: 120,
+            alignment: Alignment.bottomRight,
+            color: Colors.black87,
           ),
           const SizedBox(height: 30),
           SizedBox(
@@ -80,6 +80,7 @@ class _TechnologyStackState extends State<TechnologyStack>
               ],
             ),
           ),
+          const SizedBox(height: 40),
         ],
       ),
     );

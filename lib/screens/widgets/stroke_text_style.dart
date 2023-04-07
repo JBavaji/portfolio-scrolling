@@ -5,18 +5,22 @@ class StrokeText extends StatelessWidget {
   final String strokeText;
   final String? fillText;
   final double? fontSize;
+  final AlignmentGeometry? alignment;
+  final Color? color;
 
   const StrokeText({
     Key? key,
     required this.strokeText,
     this.fillText,
     this.fontSize,
+    this.alignment,
+    this.color,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: Alignment.center,
+      alignment: alignment ?? Alignment.center,
       children: <Widget>[
         // Stroked text as border.
         Text(
@@ -27,7 +31,7 @@ class StrokeText extends StatelessWidget {
                 foreground: Paint()
                   ..style = PaintingStyle.stroke
                   ..strokeWidth = 0.5
-                  ..color = Colors.green.shade700,
+                  ..color = color ?? Colors.green.shade700,
               ),
         ),
         // Solid text as fill.
@@ -45,7 +49,7 @@ class StrokeText extends StatelessWidget {
                 style: Theme.of(context).textTheme.displayLarge?.copyWith(
                       fontSize: 86,
                       fontWeight: FontWeight.w700,
-                      color: Colors.green.shade700,
+                      color: color ?? Colors.green.shade700,
                     ),
               )
             : const SizedBox(),

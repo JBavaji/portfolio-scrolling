@@ -28,6 +28,19 @@ final List<ProjectInfoModel> projectInfoList = [
     },
   ),
   ProjectInfoModel(
+    title: 'Ashapura Enterprise Ubon Store',
+    logo:
+    "https://play-lh.googleusercontent.com/x61L3QwcOc868T_BlnEbxe1TX_1kNsvi2DHFyJUc_Jcwb_fReyzqsRbv4q-WI-oDauQ9",
+    description: 'Ashapura Enterprise - Ubon Store. dealer of Jamnagar district Ubon product.',
+    downloads: '10000+',
+    urls: {
+      "web": "",
+      "store":
+      "https://play.google.com/store/apps/details?id=com.ashapurahotel.ubonstore",
+      "center": "",
+    },
+  ),
+  ProjectInfoModel(
     title: 'スマホ診断 online',
     logo:
         "https://play-lh.googleusercontent.com/rx2pXmoGZGgDZ6po8wb37S7Jc7HoKmWd0LaRpoQFuHgDFFvGVxqqJfHklD82fSJ2n2Q",
@@ -117,29 +130,56 @@ final List<ProjectInfoModel> projectInfoList = [
       "center": "",
     },
   ),
+
+  ProjectInfoModel(
+    title: 'TherapyBuddy',
+    logo:
+    "https://play-lh.googleusercontent.com/H9uPDhk2oRNt_WHlNAUSkt4C6dK2xfbPuf7kHrR8GcBzpF5u6pHe8Q_cRTUzvY9Zw6g=w480-h960-rw",
+    description: 'Life coaching session with Recordings feature & pass code protected',
+    downloads: '500+',
+    urls: {
+      "web": "",
+      "store":
+      "https://play.google.com/store/apps/details?id=com.icoderz.therapybuddy&hl=en",
+      "center": "",
+    },
+  ),
+  ProjectInfoModel(
+    title: 'i-Tips',
+    logo:
+    "https://play-lh.googleusercontent.com/Pw9mPY1pBbYyHUIHT6ErN8q8RGdwJHUA2zKOQnzwG4vnfYkp83ba4db7XbVLH1EyhdxA=w480-h960-rw",
+    description: 'Self-evolutions & life planning to achieve change bad habits',
+    downloads: '500+',
+    urls: {
+      "web": "",
+      "store":
+      "https://play.google.com/store/apps/details?id=app.itips.com.itips&hl=en",
+      "center": "",
+    },
+  ),
   ProjectInfoModel(
     title: '印傻子',
     logo:
-        "https://play-lh.googleusercontent.com/0tAV4ShQ67s7ne2Wd0tsKNWE34sxaCP8FjsBsKcUKgR5FhcCWRWjibFPMsFuawwMQW5v",
+    "https://play-lh.googleusercontent.com/0tAV4ShQ67s7ne2Wd0tsKNWE34sxaCP8FjsBsKcUKgR5FhcCWRWjibFPMsFuawwMQW5v",
     description: 'Inkfool – Photography Application with simple instructional help you to produced the memory in form of PhotoBook',
     downloads: '1000+',
     urls: {
       "web": "",
       "store":
-          "https://play.google.com/store/apps/details?id=com.inkfool.app&hl=en",
+      "https://play.google.com/store/apps/details?id=com.inkfool.app&hl=en",
       "center": "",
     },
   ),
   ProjectInfoModel(
-    title: 'Ashapura Enterprise Ubon Store',
+    title: 'DyrectMe',
     logo:
-        "https://play-lh.googleusercontent.com/x61L3QwcOc868T_BlnEbxe1TX_1kNsvi2DHFyJUc_Jcwb_fReyzqsRbv4q-WI-oDauQ9",
-    description: 'Ashapura Enterprise - Ubon Store. dealer of Jamnagar district Ubon product.',
-    downloads: '10000+',
+    "https://play-lh.googleusercontent.com/cf8sk-UOxJtoiQOTzugLUgK12ZhkweQqLdWRIq3HlRHKaNHbXxyTetU7RaTlV8Hicw=w480-h960-rw",
+    description: 'DyrectMe helps you find businesses, deals and events in your local area or the area you are visiting. DyrectMe uses GPS location technology to pick up your location and give you the deals that are close to you.',
+    downloads: '50+',
     urls: {
       "web": "",
       "store":
-          "https://play.google.com/store/apps/details?id=com.ashapurahotel.ubonstore",
+      "https://play.google.com/store/apps/details?id=com.dyrectme.DyrectMe&hl=en",
       "center": "",
     },
   ),

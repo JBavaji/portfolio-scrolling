@@ -48,7 +48,7 @@ class _PortfolioState extends State<Portfolio> {
 
   @override
   Widget build(BuildContext context) {
-    int totalPages = (itemData.length / 3) as int;
+    int totalPages = itemData.length ~/ 3;
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(

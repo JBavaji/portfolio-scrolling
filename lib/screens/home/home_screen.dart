@@ -9,6 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
+import '../skills/technology_stack.dart';
 import 'bloc/page_index_bloc.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -50,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
             }
           },
           child: ScrollablePositionedList.builder(
-            itemCount: 6,
+            itemCount: 7,
             itemScrollController: itemScrollController,
             itemBuilder: (context, index) {
               switch (index) {
@@ -64,18 +65,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   return const Portfolio();
 
                 case 3:
-                  return const AboutMe();
+                  return const TechnologyStack();
 
                 case 4:
-                  return const Contact();
+                  return const AboutMe();
 
                 case 5:
+                  return const Contact();
+
+                case 6:
                   return const Footer();
 
                 default:
                   return Container(
                     color: Colors.green,
-                    height: 10,
+                    height: 0,
                   );
               }
             },

@@ -1,5 +1,5 @@
-import 'package:app/screens/about/technologies_data.dart';
-import 'package:app/screens/about/technology_item.dart';
+import 'package:app/screens/skills/technologies_data.dart';
+import 'package:app/screens/skills/technology_item.dart';
 import 'package:flutter/cupertino.dart';
 
 class TechnologyLanguages extends StatelessWidget {
