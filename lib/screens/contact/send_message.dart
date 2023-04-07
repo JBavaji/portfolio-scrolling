@@ -57,7 +57,7 @@ class _SendMessageState extends State<SendMessage> {
                           FormInput(
                               controller: _nameController,
                               label: 'Name',
-                              hint: 'John Wick'),
+                              hint: 'Some one'),
                           const SizedBox(width: 20),
                           FormInput(
                               controller: _emailController,
@@ -75,7 +75,7 @@ class _SendMessageState extends State<SendMessage> {
                           FormInput(
                               controller: _companyController,
                               label: 'Company',
-                              hint: 'Synechron Technology'),
+                              hint: 'Some Technology'),
                         ],
                       ),
                       FormInput(

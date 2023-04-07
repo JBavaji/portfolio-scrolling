@@ -1,7 +1,8 @@
+import 'package:app/screens/about/technology_stack.dart';
 import 'package:app/screens/portfolio/app_item.dart';
 import 'package:flutter/material.dart';
 
-import 'company_item.dart';
+import 'info_item.dart';
 
 class AboutMe extends StatefulWidget {
   const AboutMe({Key? key}) : super(key: key);
@@ -36,9 +37,9 @@ class _AboutMeState extends State<AboutMe> {
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Expanded(child: CompanyItem()),
-              Expanded(child: CompanyItem()),
+            children: const [
+              Expanded(child: InfoItem()),
+              Expanded(flex: 2, child: TechnologyStack()),
             ],
           ),
         ),

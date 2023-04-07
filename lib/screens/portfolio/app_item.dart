@@ -1,8 +1,6 @@
+import 'package:app/screens/portfolio/model/app_info.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../widgets/social_media/social_media_data.dart';
-import 'app_url_widget.dart';
 import 'model/project_info_model.dart';
 
 class AppItem extends StatelessWidget {
@@ -28,49 +26,7 @@ class AppItem extends StatelessWidget {
           Positioned(
             top: 120,
             left: 20,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ConstrainedBox(
-                  constraints: BoxConstraints(
-                    maxWidth: MediaQuery.of(context).size.width * 0.25,
-                  ),
-                  child: Text(
-                    projectInfo.title,
-                    style: Theme.of(context).textTheme.displayLarge,
-                  ),
-                ),
-                const SizedBox(height: 20),
-                ConstrainedBox(
-                  constraints: BoxConstraints(
-                    maxWidth: MediaQuery.of(context).size.width * 0.25,
-                  ),
-                  child: Text(
-                    projectInfo.description,
-                    style: Theme.of(context).textTheme.displayMedium,
-                  ),
-                ),
-                const SizedBox(height: 20),
-                Text(
-                  projectInfo.downloads,
-                  style: Theme.of(context).textTheme.displayMedium,
-                ),
-
-                ConstrainedBox(
-                  constraints: BoxConstraints(
-                    maxWidth: MediaQuery.of(context).size.width * 0.25,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      ...generateWidgetForUrl(projectInfo.urls, Colors.green),
-                    ],
-                  ),
-                ),
-
-              ],
-            ),
+            child: AppInfo(projectInfo: projectInfo),
           ),
           Positioned(
             left: 50,
@@ -83,25 +39,26 @@ class AppItem extends StatelessWidget {
               ),
               child: Center(
                 child: SizedBox(
-                    width: 80,
-                    height: 80,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(50),
-                      child: Image.network(
-                        projectInfo.logo,
-                        fit: BoxFit.fill,
-                        errorBuilder: (context, error, stackTrace) {
-                          return Container(
-                            color: Colors.grey.shade700,
-                            alignment: Alignment.center,
-                            child: const Text(
-                              'Whoops!',
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          );
-                        },
-                      ),
-                    )),
+                  width: 80,
+                  height: 80,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(50),
+                    child: Image.network(
+                      projectInfo.logo,
+                      fit: BoxFit.fill,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Container(
+                          color: Colors.grey.shade700,
+                          alignment: Alignment.center,
+                          child: const Text(
+                            'Whoops!',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
@@ -110,4 +67,3 @@ class AppItem extends StatelessWidget {
     );
   }
 }
-
