@@ -21,13 +21,6 @@ class PersonalInfo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Personal Information',
-            style: Theme.of(context)
-                .textTheme
-                .displayLarge
-                ?.copyWith(fontWeight: FontWeight.w500, fontSize: 42),
-          ),
           infoWidget(
             context,
             'Name: Jayeshgiri R. Bavaji',

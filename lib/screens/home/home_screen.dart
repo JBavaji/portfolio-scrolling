@@ -46,6 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
             if (state is ScrollCurrentPageIndexState) {
               itemScrollController.scrollTo(
                 index: state.currentPage,
+                alignment: state.currentPage == 2 ? 0 : 0.1,
                 duration: const Duration(seconds: 1),
               );
             }

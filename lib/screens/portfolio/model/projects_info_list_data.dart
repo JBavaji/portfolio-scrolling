@@ -10,7 +10,7 @@ final List<ProjectInfoModel> projectInfoList = [
     downloads: '',
     urls: {
       "web": "https://finlabs-pfls-blockchain-award-dev.synechron.net/",
-      "store": "",
+      "store": "https://finlabs-pfls-blockchain-award-dev.synechron.net/api/download/file/app-reward-nft.apk",
       "center": "",
     },
   ),

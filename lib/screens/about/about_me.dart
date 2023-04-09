@@ -1,5 +1,5 @@
+import 'package:app/screens/about/toggle_info.dart';
 import 'package:app/screens/about/years_info.dart';
-import 'package:app/screens/about/personal_info.dart';
 import 'package:flutter/material.dart';
 
 class AboutMe extends StatelessWidget {
@@ -11,8 +11,6 @@ class AboutMe extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            // Instead of two different colors here I want to have the two other Linear gradients
-            // with each having two other different colors that go from top to bottom
             Colors.green.withOpacity(0.15),
             Colors.transparent,
           ],
@@ -31,8 +29,8 @@ class AboutMe extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.max,
               children: const [
-                PersonalInfo(),
-                Expanded(child: YearsInfo()),
+                Expanded(child: ToggleInfo()),
+                Expanded(flex: 2, child: YearsInfo()),
               ],
             ),
           ),

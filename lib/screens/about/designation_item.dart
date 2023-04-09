@@ -14,23 +14,20 @@ class DesignationItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title,
-            style: Theme.of(context).textTheme.displayMedium,
-          ),
-          const SizedBox(height: 5),
-          Text(
-            '$end - $start',
-            style: Theme.of(context).textTheme.displaySmall,
-          ),
-        ],
-      ),
+    return  Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: Theme.of(context).textTheme.displayMedium,
+        ),
+        const SizedBox(height: 5),
+        Text(
+          '$end - $start',
+          style: Theme.of(context).textTheme.displaySmall,
+        ),
+      ],
     );
   }
 }

@@ -17,15 +17,6 @@ final List<CompanyInfoModel> companyInfoList = [
       'Write technical document/diagram for stack holders.',
       'Provide consultancy to stack holder for identify requirements and achieve technical understanding.',
       'Support team setup initial process in application development across different teams.',
-
-      // 'Participate in the discussion with the product team to estimate the user stories to split the stories into achieve sprint goal.',
-      // 'Provide dedicated support for timely release of application versions.',
-      // 'Reviewing the progress of the development team communicate to the assure delivery of user stories in sprint.',
-      // 'Mainly involved in adding new features and bug fixes.',
-      // 'Resolved critical problems, improved operations and provided exceptional client support.',
-      // 'Client application download increase more than 20% from Play Store & App Store.',
-      // 'Recognise by client for contribute for product development and success to result to awarded me As Employee of Year in account.',
-      // 'Worked with onshore/offshore management to understand client requirement and provide technical service.',
     ],
     expanded: false,
   ),
@@ -116,6 +107,36 @@ final List<CompanyInfoModel> companyInfoList = [
       'Worked with multiple application as Android Application Developer with 1 year of experience.',
       'Created mobile applications using Java technologies.',
       'Gained hands-on experience with Java, Android SDK, Rest APIs.',
+    ],
+    expanded: false,
+  ),
+  CompanyInfoModel(
+    name: 'Master of Computer Application:',
+    status: '66.67%',
+    designations: [
+      DesignationInfoModel(
+        title: 'Computer Science, (MCA)',
+        start: '2009',
+        end: '2012',
+      ),
+    ],
+    points: [
+      'Department Of Computer Science, Saurashtra University, Rajkot',
+    ],
+    expanded: false,
+  ),
+  CompanyInfoModel(
+    name: 'Bachelor of Computer Applications:',
+    status: '54.90%',
+    designations: [
+      DesignationInfoModel(
+        title: 'Computer Science, (BCA)',
+        start: '2006',
+        end: '2009',
+      ),
+    ],
+    points: [
+      'Shree H. J. Doshi I. T. Institute, Saurashtra University, Jamnagar',
     ],
     expanded: false,
   ),

@@ -8,9 +8,9 @@ class PointItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10),
+      padding: const EdgeInsets.symmetric(vertical: 5.0),
       child: Text(
-        '• $point',
+        point,
         textAlign: TextAlign.justify,
         style: Theme.of(context).textTheme.displaySmall,
       ),
