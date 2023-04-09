@@ -8,22 +8,29 @@ List<Widget> generateWidgetForUrl(Map<String, String> urls, Color color) {
 
   urls.forEach((key, value) {
     IconData? icon;
+    String? label;
     if (key == "web" && value.isNotEmpty) {
       icon = FontAwesomeIcons.internetExplorer;
+      label = 'Go to Web site';
     } else if (key == "store" && value.isNotEmpty) {
       icon = FontAwesomeIcons.googlePlay;
+      label = value.endsWith('.apk') ? 'Download APK' : 'Go to Play store';
     } else if (key == "center" && value.isNotEmpty) {
       icon = FontAwesomeIcons.appStore;
+      label = 'Go to App store';
     }
 
     if (icon != null) {
       icons.add(
-        IconButton(
-          icon: FaIcon(icon),
-          color: color,
-          onPressed: () {
-            SocialMediaData.launchURL(value);
-          },
+        Padding(
+          padding: const EdgeInsets.only(bottom: 10.0),
+          child: ElevatedButton.icon(
+            icon: FaIcon(icon),
+            onPressed: () {
+              SocialMediaData.launchURL(value);
+            },
+            label: Text(label!),
+          ),
         ),
       );
     }

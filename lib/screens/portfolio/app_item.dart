@@ -1,6 +1,7 @@
 import 'package:app/screens/portfolio/model/app_info.dart';
 import 'package:flutter/material.dart';
 
+import 'app_url_widget.dart';
 import 'model/project_info_model.dart';
 
 class AppItem extends StatelessWidget {
@@ -60,6 +61,17 @@ class AppItem extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+          ),
+          Positioned(
+            bottom: 10,
+            right: 20,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                ...generateWidgetForUrl(projectInfo.urls, Colors.green),
+              ],
             ),
           ),
         ],
