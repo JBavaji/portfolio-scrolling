@@ -1,4 +1,4 @@
-import 'package:app/screens/about/education_info.dart';
+import 'package:app/screens/about/years_info.dart';
 import 'package:app/screens/about/personal_info.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +32,7 @@ class AboutMe extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               children: const [
                 PersonalInfo(),
-                Expanded(child: EducationInfo()),
+                Expanded(child: YearsInfo()),
               ],
             ),
           ),

@@ -6,6 +6,7 @@ final List<Map<String, String>> technologies = [
   {'design': 'UI/UX Design'},
   {'blockchain': 'Blockchain'},
   {'cloud': 'Cloud'},
+  {'source': 'Source Control'},
   {'database': 'Database'},
 ];
 
@@ -26,12 +27,19 @@ final List<Map<String, List<Map<String, String>>>> languages = [
   },
   {
     'design': [
+      {'name': "Sketch", 'icon': AppAssets.sketch},
       {'name': "Figma", 'icon': AppAssets.figma},
     ]
   },
   {
     'blockchain': [
       {'name': "Solana", 'icon': AppAssets.solana},
+    ]
+  },
+  {
+    'source': [
+      {'name': "Github", 'icon': AppAssets.github},
+      {'name': "SourceTree", 'icon': AppAssets.sourcetree},
     ]
   },
   {
