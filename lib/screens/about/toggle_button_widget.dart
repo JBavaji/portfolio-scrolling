@@ -15,7 +15,7 @@ class ToggleButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int flex = 1;
-    Color color = Colors.transparent;
+    Color color = Colors.white;
     Color? textColor;
     if (isSelected) {
       color = Colors.green;

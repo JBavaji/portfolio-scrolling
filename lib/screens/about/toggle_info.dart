@@ -56,14 +56,18 @@ class _ToggleInfoState extends State<ToggleInfo> {
         ),
         _infoView == ToggleInfoView.personal
             ? const PersonalInfo()
-            : SizedBox(
+            : Container(
                 height: MediaQuery.of(context).size.height * 0.50,
-                child: ListView(
-                  scrollDirection: Axis.vertical,
-                  children: [
-                    EducationInfo(data: companyInfoList[6]),
-                    EducationInfo(data: companyInfoList[7]),
-                  ],
+                color: Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: ListView(
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      EducationInfo(data: companyInfoList[6]),
+                      EducationInfo(data: companyInfoList[7]),
+                    ],
+                  ),
                 ),
               ),
       ],

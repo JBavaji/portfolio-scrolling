@@ -111,11 +111,11 @@ final List<CompanyInfoModel> companyInfoList = [
     expanded: false,
   ),
   CompanyInfoModel(
-    name: 'Master of Computer Application:',
-    status: '66.67%',
+    name: 'Master of Computer Application',
+    status: '',
     designations: [
       DesignationInfoModel(
-        title: 'Computer Science, (MCA)',
+        title: 'Computer Science, 66.67%',
         start: '2009',
         end: '2012',
       ),
@@ -126,11 +126,11 @@ final List<CompanyInfoModel> companyInfoList = [
     expanded: false,
   ),
   CompanyInfoModel(
-    name: 'Bachelor of Computer Applications:',
-    status: '54.90%',
+    name: 'Bachelor of Computer Applications',
+    status: '',
     designations: [
       DesignationInfoModel(
-        title: 'Computer Science, (BCA)',
+        title: 'Computer Science, 54.90%',
         start: '2006',
         end: '2009',
       ),
