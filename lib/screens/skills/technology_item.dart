@@ -17,20 +17,22 @@ class TechnologyItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-              height: 100,
-              width: 100,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.10),
-              ),
-              child: SizedBox(
-                width: 70,
-                height: 70,
-                child: Image.asset(
-                  item['icon']!,
+          Expanded(
+            child: Container(
+                height: 100,
+                width: 200,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: Colors.grey.withOpacity(0.10),
                 ),
-              )),
+                child: SizedBox(
+                  width: 70,
+                  height: 70,
+                  child: Image.asset(
+                    item['icon']!,
+                  ),
+                )),
+          ),
           const SizedBox(height: 10),
           Text(item['name']!, style: Theme.of(context).textTheme.displayMedium),
         ],
