@@ -16,12 +16,14 @@ class _ScrollingExampleScreenState extends State<ScrollingExampleScreen> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          if(currentIndex + 5 < 50){
+          if (currentIndex + 5 < 50) {
             currentIndex += 5;
           }
 
           itemScrollController.scrollTo(
-              index: currentIndex, duration: Duration(seconds: 2));
+            index: currentIndex,
+            duration: const Duration(seconds: 2),
+          );
         },
       ),
       body: OrientationBuilder(

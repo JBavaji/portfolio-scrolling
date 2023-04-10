@@ -1,12 +1,30 @@
+import 'package:app/screens/home/screens_data.dart';
+
 import '../../model/page.dart';
 
 class PageNavigationData {
   PageNavigationData._();
 
   static List<AppPage> pageNavigatorList = [
-    AppPage(index: 2, label: 'Portfolio', route: '/portfolio'),
-    AppPage(index: 3, label: 'Skills', route: '/skills'),
-    AppPage(index: 4, label: 'About', route: '/about'),
-    AppPage(index: 5, label: 'Contact', route: '/contact'),
+    AppPage(
+      index: ScreenNavigation.portfolio.index,
+      label: 'Portfolio',
+      route: '/portfolio',
+    ),
+    AppPage(
+      index: ScreenNavigation.technologyStack.index,
+      label: 'Skills',
+      route: '/skills',
+    ),
+    AppPage(
+      index: ScreenNavigation.aboutMe.index,
+      label: 'About',
+      route: '/about',
+    ),
+    AppPage(
+      index: ScreenNavigation.contact.index,
+      label: 'Contact',
+      route: '/contact',
+    ),
   ];
 }
