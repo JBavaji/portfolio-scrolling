@@ -15,7 +15,7 @@ class Intro extends StatelessWidget {
           return Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
-              IntroSection(),
+              Expanded(child: IntroSection()),
               IntroImage(),
             ],
           );

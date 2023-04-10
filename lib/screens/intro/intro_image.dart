@@ -7,7 +7,7 @@ class IntroImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return       ClipRRect(
+    return ClipRRect(
       borderRadius: const BorderRadius.only(
         topLeft: Radius.circular(20),
       ),
