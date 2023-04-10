@@ -1,3 +1,4 @@
+import 'package:app/screens/skills/stroke_label_widget.dart';
 import 'package:app/screens/skills/technologies_data.dart';
 import 'package:app/screens/skills/technology_language.dart';
 import 'package:app/screens/widgets/stroke_text_style.dart';
@@ -29,24 +30,25 @@ class _TechnologyStackState extends State<TechnologyStack>
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    double height = size.height * 0.80;
+    double width = size.width;
+
+    if (size.width < 600) {
+      height = size.height * 0.65;
+    }
+
     return Container(
-      height: MediaQuery.of(context).size.height * 0.80,
-      width: MediaQuery.of(context).size.width,
+      height: height,
+      width: width,
       decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(5))),
+        color: Colors.white,
+        borderRadius: BorderRadius.all(Radius.circular(5)),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SizedBox(height: 20),
-          const StrokeText(
-            strokeText: 'Technology Stack',
-            fillText: '10+ Years\n',
-            fontSize: 120,
-            alignment: Alignment.bottomRight,
-            color: Colors.black87,
-          ),
-          const SizedBox(height: 30),
+          const StrokeLabelWidget(),
           SizedBox(
             height: 35,
             child: TabBar(

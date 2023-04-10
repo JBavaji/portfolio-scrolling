@@ -10,6 +10,14 @@ class TechnologyItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    double height = 150;
+    double width = 150;
+
+    if (size.width < 600) {
+      height = 100;
+      width = 100;
+    }
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
@@ -19,8 +27,8 @@ class TechnologyItem extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-                height: 100,
-                width: 200,
+                height: height,
+                width: width,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Colors.grey.withOpacity(0.10),
