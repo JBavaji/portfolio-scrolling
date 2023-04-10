@@ -11,6 +11,14 @@ class AppItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    double width = size.width * 0.30;
+    double height = size.height * 0.70;
+    if(size.width < 600) {
+      width = size.width * 0.65;
+      height = size.height;
+    }
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Stack(
@@ -18,8 +26,8 @@ class AppItem extends StatelessWidget {
         children: <Widget>[
           Container(
             margin: const EdgeInsets.only(top: 40),
-            height: MediaQuery.of(context).size.height * 0.70,
-            width: MediaQuery.of(context).size.width * 0.30,
+            height: height,
+            width: width,
             decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(5))),

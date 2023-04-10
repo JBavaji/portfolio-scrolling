@@ -8,9 +8,17 @@ class AppInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    double width = size.width * 0.25;
+    double height = size.height * 0.75;
+    if(size.width < 600) {
+      width = size.width * 0.55;
+      height = size.height * 0.45;
+    }
+
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.25,
-      height: double.maxFinite,
+      width: width,
+      height: height,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
