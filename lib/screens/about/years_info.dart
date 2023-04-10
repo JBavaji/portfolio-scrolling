@@ -28,47 +28,67 @@ class _YearsInfoState extends State<YearsInfo> {
     int yearSelected = (2023 - _value) as int;
     CompanyInfoModel infoModel = CompanyInfoModel.byYear(yearSelected);
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: Container(
-        decoration: const BoxDecoration(
-          color: Colors.white,
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(30),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('$maxYear',
+    return Container(
+      decoration: const BoxDecoration(
+        color: Colors.white,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 30),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              alignment: Alignment.center,
+              color: Colors.green,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 20,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('$maxYear',
+                        style:
+                            Theme.of(context).textTheme.displayMedium?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                )),
+                    Text(
+                      'Employment History',
                       style: Theme.of(context)
                           .textTheme
                           .displayMedium
-                          ?.copyWith(fontWeight: FontWeight.bold)),
-                  Text('$minYear',
-                      style: Theme.of(context)
-                          .textTheme
-                          .displayMedium
-                          ?.copyWith(fontWeight: FontWeight.bold)),
-                ],
+                          ?.copyWith(
+                              fontWeight: FontWeight.w500, color: Colors.white),
+                    ),
+                    Text('$minYear',
+                        style:
+                            Theme.of(context).textTheme.displayMedium?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                )),
+                  ],
+                ),
               ),
-              Slider(
-                min: 0,
-                max: division.toDouble(),
-                value: _value,
-                divisions: division,
-                onChanged: (value) {
-                  setState(() {
-                    _value = value;
-                  });
-                },
-              ),
-              const SizedBox(height: 20),
-              CompanyInfo(data: infoModel),
-            ],
-          ),
+            ),
+            Slider(
+              min: 0,
+              max: division.toDouble(),
+              value: _value,
+              divisions: division,
+              onChanged: (value) {
+                setState(() {
+                  _value = value;
+                });
+              },
+            ),
+            const SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: CompanyInfo(data: infoModel),
+            ),
+          ],
         ),
       ),
     );

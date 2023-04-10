@@ -18,24 +18,26 @@ class AboutMe extends StatelessWidget {
           tileMode: TileMode.clamp,
         ),
       ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const SizedBox(height: 60),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
-              children: const [
-                Expanded(child: ToggleInfo()),
-                Expanded(flex: 2, child: YearsInfo()),
-              ],
-            ),
-          ),
-          const SizedBox(height: 100),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 60),
+        child: MediaQuery.of(context).size.width < 600
+            ? Column(
+                children: const [
+                  ToggleInfo(),
+                  SizedBox(height: 20),
+                  YearsInfo(),
+                ],
+              )
+            : Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                children: const [
+                  Expanded(child: ToggleInfo()),
+                  SizedBox(width: 30),
+                  Expanded(flex: 2, child: YearsInfo()),
+                ],
+              ),
       ),
     );
   }

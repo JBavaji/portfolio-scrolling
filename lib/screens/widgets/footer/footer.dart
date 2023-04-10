@@ -27,7 +27,7 @@ class Footer extends StatelessWidget {
                   );
                 },
               ),
-              MediaQuery.of(context).size.width > 600
+              MediaQuery.of(context).size.width > 700
                   ? const PageNavigatorRowWidget()
                   : const SizedBox(),
               const SocialMediaRowWidget(),

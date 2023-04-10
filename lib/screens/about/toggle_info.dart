@@ -57,7 +57,7 @@ class _ToggleInfoState extends State<ToggleInfo> {
         _infoView == ToggleInfoView.personal
             ? const PersonalInfo()
             : Container(
-                height: MediaQuery.of(context).size.height * 0.50,
+                height: MediaQuery.of(context).size.height * 0.45,
                 color: Colors.white,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),

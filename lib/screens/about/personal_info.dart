@@ -16,7 +16,7 @@ class PersonalInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.50,
+      height: MediaQuery.of(context).size.height * 0.45,
       width: double.maxFinite,
       color: Colors.white,
       child: Padding(
