@@ -7,12 +7,29 @@ class Contact extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: const [
-        GetInTouch(),
-        SendMessage(),
-      ],
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (constraints.maxWidth < 600) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: const [
+              SizedBox(height: 20),
+              GetInTouch(),
+              SizedBox(height: 40),
+              SendMessage(),
+              SizedBox(height: 20),
+            ],
+          );
+        } else {
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Expanded(child: GetInTouch()),
+              Expanded(child: SendMessage()),
+            ],
+          );
+        }
+      },
     );
   }
 }
