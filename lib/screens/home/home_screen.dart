@@ -1,6 +1,6 @@
 import 'package:app/screens/about/about_me.dart';
 import 'package:app/screens/contact/contact.dart';
-import 'package:app/screens/intro/intro.dart';
+import 'package:app/screens/intro/intro_screen.dart';
 import 'package:app/screens/portfolio/portfolio.dart';
 import 'package:app/screens/widgets/footer/footer.dart';
 import 'package:app/screens/widgets/header/header.dart';
