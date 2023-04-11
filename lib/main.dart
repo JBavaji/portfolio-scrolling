@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   setPathUrlStrategy();
   runApp(const MyApp());
 }

@@ -12,10 +12,9 @@ enum ScreenNavigation {
   header,
   intro,
   portfolio,
-  technologyStack,
-  aboutMe,
+  technology,
+  about,
   contact,
-  footer,
 }
 
 List<Widget> screens = [

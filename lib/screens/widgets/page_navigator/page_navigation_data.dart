@@ -12,12 +12,12 @@ class PageNavigationData {
       route: '/portfolio',
     ),
     AppPage(
-      index: ScreenNavigation.technologyStack.index,
+      index: ScreenNavigation.technology.index,
       label: 'Skills',
       route: '/skills',
     ),
     AppPage(
-      index: ScreenNavigation.aboutMe.index,
+      index: ScreenNavigation.about.index,
       label: 'About',
       route: '/about',
     ),
