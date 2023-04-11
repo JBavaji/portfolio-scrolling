@@ -6,10 +6,12 @@ import '../../home/bloc/page_index_bloc.dart';
 
 class PageNavigatorButton extends StatefulWidget {
   final AppPage page;
+  final Function? callback;
 
   const PageNavigatorButton({
     Key? key,
     required this.page,
+    this.callback,
   }) : super(key: key);
 
   @override
@@ -32,6 +34,10 @@ class _PageNavigatorButtonState extends State<PageNavigatorButton> {
         onPressed: () {
           BlocProvider.of<PageIndexBloc>(context)
               .add(ScrollToPageIndexEvent(widget.page.index));
+
+          if (widget.callback != null) {
+            widget.callback!();
+          }
         },
       ),
     );
