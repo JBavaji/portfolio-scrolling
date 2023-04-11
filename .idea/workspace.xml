@@ -10,10 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef21e603-e50e-49c3-8291-4c7b4d33338e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/screens/widgets/page_navigator/page_navigator_column_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/widgets/header/header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/widgets/header/header.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/widgets/page_navigator/page_navigator_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/widgets/page_navigator/page_navigator_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/home_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

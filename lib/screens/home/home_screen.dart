@@ -33,13 +33,18 @@ class _HomeScreenState extends State<HomeScreen> {
       });
 
       if (indices.isNotEmpty) {
+        int index = indices.first;
         if (indices.contains(ScreenNavigation.values.length)) {
-          html.window.history.pushState(
-              null, '', 'page=${ScreenNavigation.values[indices.first].name}');
+          index = indices.first;
+          if (index == ScreenNavigation.values.length) {
+            index--;
+          }
         } else {
-          html.window.history.pushState(
-              null, '', 'page=${ScreenNavigation.values[indices.last].name}');
+          index = indices.last;
         }
+
+        html.window.history
+            .pushState(null, '', 'page=${ScreenNavigation.values[index].name}');
       }
     });
     super.initState();
