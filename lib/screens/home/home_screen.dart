@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
-import 'package:universal_html/html.dart' as html;
 
 import 'bloc/page_index_bloc.dart';
 
@@ -42,9 +41,6 @@ class _HomeScreenState extends State<HomeScreen> {
         } else {
           index = indices.last;
         }
-
-        html.window.history
-            .pushState(null, '', 'page=${ScreenNavigation.values[index].name}');
       }
     });
     super.initState();
