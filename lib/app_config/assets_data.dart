@@ -20,4 +20,12 @@ class AppAssets {
   static String solana = "assets/technology/solana.png";
   static String sourcetree = "assets/technology/sourcetree.png";
   static String sketch = "assets/technology/sketch.png";
+
+  static String firebase_auth = "assets/technology/firebase_auth.png";
+  static String firebase_cloud_store =
+      "assets/technology/firebase_cloud_store.png";
+  static String firebase_crash = "assets/technology/firebase_crash.png";
+  static String firebase_function = "assets/technology/firebase_function.png";
+  static String firebase_messaging = "assets/technology/firebase_messaging.png";
+  static String firebase_storage = "assets/technology/firebase_storage.png";
 }

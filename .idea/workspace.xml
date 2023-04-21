@@ -10,14 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef21e603-e50e-49c3-8291-4c7b4d33338e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/technology/firebase_auth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/technology/firebase_cloud_store.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/technology/firebase_crash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/technology/firebase_function.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/technology/firebase_messaging.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/technology/firebase_storage.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app_config/assets_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app_config/assets_data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/intro/intro_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/intro/intro_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/skills/technologies_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/skills/technologies_data.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +56,14 @@
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/jbavaji/Documents/work/portfolio_single_page/app/lib/screens/widgets/page_navigator",
+    "last_opened_file_path": "/Users/jbavaji/Documents/work/portfolio_single_page/app/assets/technology",
     "settings.editor.selected.configurable": "advanced.settings",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/technology" />
       <recent name="$PROJECT_DIR$/lib/screens/widgets/page_navigator" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/lib/screens/skills" />

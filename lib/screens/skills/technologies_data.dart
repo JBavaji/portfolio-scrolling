@@ -3,9 +3,9 @@ import 'package:app/app_config/assets_data.dart';
 final List<Map<String, String>> technologies = [
   {'mobile': 'Mobile Technology'},
   {'web': 'Web Technology'},
+  {'cloud': 'Cloud'},
   {'design': 'UI/UX Design'},
   {'blockchain': 'Blockchain'},
-  {'cloud': 'Cloud'},
   {'source': 'Source Control'},
   {'database': 'Database'},
 ];
@@ -26,6 +26,17 @@ final List<Map<String, List<Map<String, String>>>> languages = [
     ]
   },
   {
+    'cloud': [
+      {'name': "Firebase", 'icon': AppAssets.firebase},
+      {'name': "Authentication", 'icon': AppAssets.firebase_auth},
+      {'name': "Cloud FireStore", 'icon': AppAssets.firebase_cloud_store},
+      {'name': "Cloud Storage", 'icon': AppAssets.firebase_storage},
+      {'name': "Cloud Messaging", 'icon': AppAssets.firebase_messaging},
+      {'name': "Cloud Functions", 'icon': AppAssets.firebase_function},
+      {'name': "Crashlytics", 'icon': AppAssets.firebase_crash},
+    ]
+  },
+  {
     'design': [
       {'name': "Sketch", 'icon': AppAssets.sketch},
       {'name': "Figma", 'icon': AppAssets.figma},
@@ -40,11 +51,6 @@ final List<Map<String, List<Map<String, String>>>> languages = [
     'source': [
       {'name': "Github", 'icon': AppAssets.github},
       {'name': "SourceTree", 'icon': AppAssets.sourcetree},
-    ]
-  },
-  {
-    'cloud': [
-      {'name': "Firebase", 'icon': AppAssets.firebase},
     ]
   },
   {
